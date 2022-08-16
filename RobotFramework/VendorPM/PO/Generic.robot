@@ -11,7 +11,7 @@ Library           SeleniumLibrary
 ${user_name}             testpmenttdel@test.com
 ${invalid_password}      123445
 ${valid_password}        abc123
-${url}                   https://stage.vendorpm.com/login
+${url}                   https://qa.vendorpm.com/login
 ${browser_name}          Chrome
 
 
