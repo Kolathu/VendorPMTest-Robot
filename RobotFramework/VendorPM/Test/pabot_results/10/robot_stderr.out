@@ -1,0 +1,14 @@
+[ ERROR ] Error in file 'C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\Workoncodeupload.robot' on line 5: Importing library 'C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\UploadTest\Fileupload.py' failed: IndentationError: expected an indented block after class definition on line 7 (Fileupload.py, line 12)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\UploadTest
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\kolat\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin

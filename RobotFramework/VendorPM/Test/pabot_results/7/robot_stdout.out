@@ -1,0 +1,52 @@
+==============================================================================
+Test                                                                          
+==============================================================================
+Test.Testloginpage :: To validate the login page                              
+==============================================================================
+Validate login page                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\Testloginpage.robot:8
+    T:  Validate login page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\Testloginpage.robot:9
+      open the browser with stage url    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\Testloginpage.robot:14
+      Create Webdriver    Chrome    executable_path=C:/Users/kolat/Documents/chromedriver_win32/chromedriver.exe
+______________________________________________________________________________
+| FAIL |
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 102
+Current browser version is 104.0.5112.81 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E6D953+2414931]
+	Ordinal0 [0x00DFF5E1+1963489]
+	Ordinal0 [0x00CEC6B8+837304]
+	Ordinal0 [0x00D0CAE3+969443]
+	Ordinal0 [0x00D086FA+952058]
+	Ordinal0 [0x00D05FB1+942001]
+	Ordinal0 [0x00D39100+1151232]
+	Ordinal0 [0x00D38D5A+1150298]
+	Ordinal0 [0x00D342B6+1131190]
+	Ordinal0 [0x00D0E860+976992]
+	Ordinal0 [0x00D0F756+980822]
+	GetHandleVerifier [0x010DCC62+2510274]
+	GetHandleVerifier [0x010CF760+2455744]
+	GetHandleVerifier [0x00EFEABA+551962]
+	GetHandleVerifier [0x00EFD916+547446]
+	Ordinal0 [0x00E05F3B+1990459]
+	Ordinal0 [0x00E0A898+2009240]
+	Ordinal0 [0x00E0A985+2009477]
+	Ordinal0 [0x00E13AD1+2046673]
+	BaseThreadInitThunk [0x75C16739+25]
+	RtlGetFullPathName_UEx [0x77038FEF+1215]
+	RtlGetFullPathName_UEx [0x77038FBD+1165]
+------------------------------------------------------------------------------
+Test.Testloginpage :: To validate the login page                      | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Test                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\pabot_results\7\output.xml

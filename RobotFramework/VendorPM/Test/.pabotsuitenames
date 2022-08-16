@@ -1,0 +1,15 @@
+datasources:5d6a75929ac4d185dd38dcea0a9d96cb3ddc5dee
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:2b9229f6c61289e297c8c911ec141d31f7ab053b
+--suite Test.MarketPlaceRFQContract
+--suite Test.MarketPlaceRFQonetime
+--suite Test.RFQprojectfromcreatebutton
+--suite Test.RFQprojectfromcreatebuttoncontract
+--suite Test.RFQprojectfromcreatebuttondraft
+--suite Test.RFQprojectfromcreatebuttondraftchangeservice
+--suite Test.RFQprojectfromcreatebuttondraftcontract
+--suite Test.Testloginpage
+--suite Test.Workoncode
+--suite Test.Workoncodecontract
+--suite Test.Workoncodeupload

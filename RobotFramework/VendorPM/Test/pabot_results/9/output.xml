@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220810 10:52:23.874" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test">
+<suite id="s1-s1" name="Workoncodecontract" source="C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\Workoncodecontract.robot">
+<test id="s1-s1-t1" name="Validate login page" line="19">
+<kw name="open the browser with the Stage url" library="Generic" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:/Users/kolat/PycharmProjects/RobotFramework/VendorPM/Browser/chromedriver_win32/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220810 10:52:24.412" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220810 10:52:24.411" endtime="20220810 10:52:26.845"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220810 10:52:26.846" level="INFO">Opening url 'https://stage.vendorpm.com/login'</msg>
+<status status="PASS" starttime="20220810 10:52:26.845" endtime="20220810 10:52:30.632"/>
+</kw>
+<status status="PASS" starttime="20220810 10:52:24.410" endtime="20220810 10:52:30.632"/>
+</kw>
+<kw name="validate page contents">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:(//button[@type='submit'])</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220810 10:52:30.633" endtime="20220810 10:52:30.650"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//label[@title='Email Address']</arg>
+<arg>Email Address</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220810 10:52:30.651" level="INFO">Verifying element 'xpath=//label[@title='Email Address']' contains exact text 'Email Address'.</msg>
+<status status="PASS" starttime="20220810 10:52:30.651" endtime="20220810 10:52:30.702"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//label[@title='Password']</arg>
+<arg>Password</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220810 10:52:30.704" level="INFO">Verifying element 'xpath=//label[@title='Password']' contains exact text 'Password'.</msg>
+<status status="PASS" starttime="20220810 10:52:30.703" endtime="20220810 10:52:30.868"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//body/div[@id='root']/section[@id='landing-layout']/main/div[@id='login']/div[@id='login-col']/div/div[1]/div[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220810 10:52:30.897" level="INFO">Current page contains element 'xpath=//body/div[@id='root']/section[@id='landing-layout']/main/div[@id='login']/div[@id='login-col']/div/div[1]/div[2]'.</msg>
+<status status="PASS" starttime="20220810 10:52:30.868" endtime="20220810 10:52:30.897"/>
+</kw>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<arg>xpath=//input[@type='checkbox']</arg>
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<msg timestamp="20220810 10:52:30.941" level="INFO">Current page contains checkbox 'xpath=//input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20220810 10:52:30.897" endtime="20220810 10:52:30.941"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='/signup']//span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220810 10:52:30.959" level="INFO">Current page contains element 'xpath=//a[@href='/signup']//span'.</msg>
+<status status="PASS" starttime="20220810 10:52:30.942" endtime="20220810 10:52:30.960"/>
+</kw>
+<status status="PASS" starttime="20220810 10:52:30.633" endtime="20220810 10:52:30.960"/>
+</kw>
+<kw name="Login with valid credentails">
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220810 10:52:30.961" endtime="20220810 10:52:31.071"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath:(//button[@type='submit'])</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220810 10:52:31.072" endtime="20220810 10:52:35.354"/>
+</kw>
+<kw name="Fill the login Form" library="LandingPage">
+<arg>${user_name}</arg>
+<arg>${valid_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:(//input[@id='basic_email'])</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220810 10:52:35.356" level="INFO">Typing text 'testpmenttdel@test.com' into text field 'xpath:(//input[@id='basic_email'])'.</msg>
+<status status="PASS" starttime="20220810 10:52:35.356" endtime="20220810 10:52:35.615"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:(//input[@id='basic_password'])</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220810 10:52:35.616" level="INFO">Typing password into text field 'xpath:(//input[@id='basic_password'])'.</msg>
+<msg timestamp="20220810 10:52:35.678" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220810 10:52:35.762" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220810 10:52:35.616" endtime="20220810 10:52:35.763"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:(//button[@type='submit'])</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220810 10:52:35.763" level="INFO">Clicking button 'xpath:(//button[@type='submit'])'.</msg>
+<status status="PASS" starttime="20220810 10:52:35.763" endtime="20220810 10:52:35.945"/>
+</kw>
+<status status="PASS" starttime="20220810 10:52:35.355" endtime="20220810 10:52:35.945"/>
+</kw>
+<status status="PASS" starttime="20220810 10:52:30.960" endtime="20220810 10:52:35.945"/>
+</kw>
+<kw name="verify page contents on dashboard">
+<kw name="wait until Element is located in the page" library="DashboardPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Valid_Message_Login}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20220810 10:52:41.269" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220810 10:52:41.269" level="FAIL">Element 'xpath:(//section[@id='pm-dashboard']//div//div//div//h1)' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20220810 10:52:35.947" endtime="20220810 10:52:41.286"/>
+</kw>
+<status status="FAIL" starttime="20220810 10:52:35.947" endtime="20220810 10:52:41.289"/>
+</kw>
+<status status="FAIL" starttime="20220810 10:52:35.946" endtime="20220810 10:52:41.290"/>
+</kw>
+<kw name="Initiate RFQ from Dashboard">
+<status status="NOT RUN" starttime="20220810 10:52:41.290" endtime="20220810 10:52:41.291"/>
+</kw>
+<kw name="Fill the RFQ Get Started">
+<status status="NOT RUN" starttime="20220810 10:52:41.291" endtime="20220810 10:52:41.291"/>
+</kw>
+<kw name="Fill the Dates">
+<status status="NOT RUN" starttime="20220810 10:52:41.291" endtime="20220810 10:52:41.292"/>
+</kw>
+<status status="FAIL" starttime="20220810 10:52:24.409" endtime="20220810 10:52:41.292">Element 'xpath:(//section[@id='pm-dashboard']//div//div//div//h1)' did not appear in 5 seconds.</status>
+</test>
+<doc>To validate the login page</doc>
+<status status="FAIL" starttime="20220810 10:52:23.934" endtime="20220810 10:52:41.295"/>
+</suite>
+<status status="FAIL" starttime="20220810 10:52:23.896" endtime="20220810 10:52:41.297"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Workoncodecontract">Test.Workoncodecontract</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

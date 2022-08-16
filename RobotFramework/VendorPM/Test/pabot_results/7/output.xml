@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220810 10:52:01.564" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test">
+<suite id="s1-s1" name="Testloginpage" source="C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\Testloginpage.robot">
+<test id="s1-s1-t1" name="Validate login page" line="8">
+<kw name="open the browser with stage url">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:/Users/kolat/Documents/chromedriver_win32/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220810 10:52:01.847" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220810 10:52:07.276" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220810 10:52:07.277" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 102
+Current browser version is 104.0.5112.81 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E6D953+2414931]
+	Ordinal0 [0x00DFF5E1+1963489]
+	Ordinal0 [0x00CEC6B8+837304]
+	Ordinal0 [0x00D0CAE3+969443]
+	Ordinal0 [0x00D086FA+952058]
+	Ordinal0 [0x00D05FB1+942001]
+	Ordinal0 [0x00D39100+1151232]
+	Ordinal0 [0x00D38D5A+1150298]
+	Ordinal0 [0x00D342B6+1131190]
+	Ordinal0 [0x00D0E860+976992]
+	Ordinal0 [0x00D0F756+980822]
+	GetHandleVerifier [0x010DCC62+2510274]
+	GetHandleVerifier [0x010CF760+2455744]
+	GetHandleVerifier [0x00EFEABA+551962]
+	GetHandleVerifier [0x00EFD916+547446]
+	Ordinal0 [0x00E05F3B+1990459]
+	Ordinal0 [0x00E0A898+2009240]
+	Ordinal0 [0x00E0A985+2009477]
+	Ordinal0 [0x00E13AD1+2046673]
+	BaseThreadInitThunk [0x75C16739+25]
+	RtlGetFullPathName_UEx [0x77038FEF+1215]
+	RtlGetFullPathName_UEx [0x77038FBD+1165]
+</msg>
+<status status="FAIL" starttime="20220810 10:52:01.846" endtime="20220810 10:52:08.307"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://stage.vendorpm.com/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220810 10:52:08.307" endtime="20220810 10:52:08.308"/>
+</kw>
+<status status="FAIL" starttime="20220810 10:52:01.846" endtime="20220810 10:52:08.309"/>
+</kw>
+<kw name="validate page contents">
+<status status="NOT RUN" starttime="20220810 10:52:08.309" endtime="20220810 10:52:08.309"/>
+</kw>
+<status status="FAIL" starttime="20220810 10:52:01.845" endtime="20220810 10:52:08.310">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 102
+Current browser version is 104.0.5112.81 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E6D953+2414931]
+	Ordinal0 [0x00DFF5E1+1963489]
+	Ordinal0 [0x00CEC6B8+837304]
+	Ordinal0 [0x00D0CAE3+969443]
+	Ordinal0 [0x00D086FA+952058]
+	Ordinal0 [0x00D05FB1+942001]
+	Ordinal0 [0x00D39100+1151232]
+	Ordinal0 [0x00D38D5A+1150298]
+	Ordinal0 [0x00D342B6+1131190]
+	Ordinal0 [0x00D0E860+976992]
+	Ordinal0 [0x00D0F756+980822]
+	GetHandleVerifier [0x010DCC62+2510274]
+	GetHandleVerifier [0x010CF760+2455744]
+	GetHandleVerifier [0x00EFEABA+551962]
+	GetHandleVerifier [0x00EFD916+547446]
+	Ordinal0 [0x00E05F3B+1990459]
+	Ordinal0 [0x00E0A898+2009240]
+	Ordinal0 [0x00E0A985+2009477]
+	Ordinal0 [0x00E13AD1+2046673]
+	BaseThreadInitThunk [0x75C16739+25]
+	RtlGetFullPathName_UEx [0x77038FEF+1215]
+	RtlGetFullPathName_UEx [0x77038FBD+1165]
+</status>
+</test>
+<doc>To validate the login page</doc>
+<status status="FAIL" starttime="20220810 10:52:01.596" endtime="20220810 10:52:08.311"/>
+</suite>
+<status status="FAIL" starttime="20220810 10:52:01.576" endtime="20220810 10:52:08.313"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testloginpage">Test.Testloginpage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

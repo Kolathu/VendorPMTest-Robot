@@ -1,0 +1,31 @@
+==============================================================================
+Test                                                                          
+==============================================================================
+Test.RFQprojectfromcreatebuttondraft :: To validate the login page            
+==============================================================================
+Validate login page                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\RFQprojectfromcreatebuttondraft.robot:21
+    T:  Validate login page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\RFQprojectfromcreatebuttondraft.robot:26
+      verify page contents on dashboard    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\RFQprojectfromcreatebuttondraft.robot:60
+      wait until Element is located in the page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\PO\DashboardPage.robot:16
+      Wait Until Page Contains Element    ${Valid_Message_Login}
+      |  ${Valid_Message_Login} = xpath:(//section[@id='pm-dashboard']//div//div//div//h1) (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath:(//section[@id='pm-dashboard']//div//div//div//h1)' did not appear in 5 seconds.
+------------------------------------------------------------------------------
+Test.RFQprojectfromcreatebuttondraft :: To validate the login page    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Test                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\pabot_results\4\output.xml

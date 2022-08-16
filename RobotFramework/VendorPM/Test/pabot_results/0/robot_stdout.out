@@ -1,0 +1,28 @@
+==============================================================================
+Test                                                                          
+==============================================================================
+Test.MarketPlaceRFQContract :: To validate the login page                     
+==============================================================================
+Validate login page                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\MarketPlaceRFQContract.robot:20
+    T:  Validate login page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\MarketPlaceRFQContract.robot:25
+      Verify page contents on Dashbaord    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\PO\Marketplace.robot:32
+      Wait Until Page Contains Element    ${Marketplace_link}
+      |  ${Marketplace_link} = xpath:(//p[normalize-space()='Marketplace']) (str)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath:(//p[normalize-space()='Marketplace'])' did not appear in 5 seconds.
+------------------------------------------------------------------------------
+Test.MarketPlaceRFQContract :: To validate the login page             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Test                                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\kolat\PycharmProjects\RobotFramework\VendorPM\Test\pabot_results\0\output.xml
