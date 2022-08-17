@@ -5,7 +5,8 @@ Resource        Generic.robot
 
 
 *** Variables ***
-${Valid_Message_Login}      xpath:(//section[@id='pm-dashboard']//div//div//div//h1)
+${Valid_Message_Login_PM}      xpath:(//section[@id='pm-dashboard']//div//div//div//h1)
+${Valid_Message_Login_Vendor}      xpath:(//body/div/section/section/section/main/div/div/div/h1[1])
 
 *** Keywords ***
 
@@ -13,7 +14,11 @@ ${Valid_Message_Login}      xpath:(//section[@id='pm-dashboard']//div//div//div/
 
 wait until Element is located in the page
 
-    Wait Until Page Contains Element     ${Valid_Message_Login}
+    Wait Until Page Contains Element     ${Valid_Message_Login_PM}
+
+wait until Element is located in the page Vendor
+
+    Wait Until Page Contains Element     ${Valid_Message_Login_Vendor}
 
 
 

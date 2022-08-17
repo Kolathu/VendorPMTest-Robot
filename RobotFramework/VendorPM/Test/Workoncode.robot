@@ -5,6 +5,9 @@ Library     SeleniumLibrary
 Test Setup      open the browser with the Stage url
 #Test Teardown   Close Browser session
 Resource        ../PO/Generic.robot
+Resource        ../PO/VendorDashboard.robot
+Resource        ../PO/VendorQuote.robot
+Resource        ../PO/Marketplace.robot
 Resource        ../PO/LandingPage.robot
 Resource        ../PO/DashboardPage.robot
 Resource        ../PO/CreateRFQbybutton.robot
@@ -22,7 +25,9 @@ Validate login page
            #Login with invalid credentails
            Login with valid credentails
            verify page contents on dashboard
-           Initiate RFQ from Dashboard
+           Verify logout
+           Login with valid credentails Vendor
+           #Initiate RFQ from Dashboard
            #Fill the RFQ Get Started
            #Fill the Dates
            #Verify Scope of Work
@@ -44,17 +49,40 @@ validate page contents
      #Go back
 
 Login with invalid credentails
-     LandingPage.Fill the login Form     ${user_name}    ${invalid_password}
+     LandingPage.Fill the login Form     ${user_name_PM}    ${invalid_password}
      LandingPage.wait until Element is located in the page
      LandingPage.verify error message is correct
 
 Login with valid credentails
      Reload Page
      Wait Until Page Contains Element     xpath:(//button[@type='submit'])
-     LandingPage.Fill the login Form     ${user_name}    ${valid_password}
+     LandingPage.Fill the login Form     ${user_name_PM}    ${valid_password}
 
 verify page contents on dashboard
      DashboardPage.wait until Element is located in the page
+
+Verify Logout
+     CreateRFQbybutton.wait until Element is located in the page
+     Marketplace.Verify Logout options
+     Marketplace.Logout as PM
+     Wait Until Page Contains Element     xpath:(//button[@type='submit'])
+     Element Text Should be     xpath=//label[@title='Email Address']   Email Address
+     Element Text Should be     xpath=//label[@title='Password']   Password
+     Page Should Contain Element    xpath=//body/div[@id='root']/section[@id='landing-layout']/main/div[@id='login']/div[@id='login-col']/div/div[1]/div[2]
+     Page Should Contain Checkbox   xpath=//input[@type='checkbox']
+     Page Should Contain Element   xpath=//a[@href='/signup']//span
+
+verify page contents on dashboard Vendor
+     DashboardPage.wait until Element is located in the page Vendor
+
+Login with valid credentails Vendor
+     Reload Page
+     Wait Until Page Contains Element     xpath:(//button[@type='submit'])
+     LandingPage.Fill the login Form     ${user_name_Vendor}    ${valid_password}
+     VendorDashboard.Verify page contents on Vendor Dashboard
+     VendorQuote.Verify page contents on Vendor Dashboard
+     VendorQuote.Select the RFQ to accept work
+     VendorQuote.Verify decline and accept works
 
 Initiate RFQ from Dashboard
      CreateRFQbybutton.wait until Element is located in the page

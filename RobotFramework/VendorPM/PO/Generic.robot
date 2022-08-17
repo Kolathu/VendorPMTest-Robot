@@ -8,7 +8,8 @@ Library           SeleniumLibrary
 
 
 *** Variables ***
-${user_name}             testpmenttdel@test.com
+${user_name_PM}             testpmenttdel@test.com
+${user_name_Vendor}             testvendorcomp@test.com
 ${invalid_password}      123445
 ${valid_password}        abc123
 ${url}                   https://qa.vendorpm.com/login

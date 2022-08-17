@@ -22,6 +22,9 @@ ${Property_select}       xpath:(//div[contains(@class,'ant-select-item-option-co
 ${Property_unselect}   xpath:(//span[@aria-label='close']//*[name()='svg'])
 ${Select_property_error}    xpath:(//div[contains(@role,'alert')])
 ${Select_service_error}     xpath:(//div[@role='alert'])
+${open_logout}     xpath:(//p[normalize-space()='testpm pmvendor'])
+${logout}       xpath:((//li[@role='menuitem'])[4])
+
 
 
 
@@ -40,9 +43,19 @@ Verify page contents on Dashbaord
     #Wait Until Page Contains Element  ${itemdescription}
    Click Element    ${Marketplace_link}
 
+Verify Logout options
+   Wait Until Page Contains Element  ${open_logout}
+   Click Element   ${open_logout}
+   Set Selenium Implicit Wait  5
+   Wait Until Page Contains Element   ${logout}
+
+Logout as PM
+   Click Element    ${logout}
+   Set Selenium Implicit Wait  5
+
 
 Verify Marketplace Page contents
-     Wait Until Page Contains Element  ${Marketplace_Header}
+    Wait Until Page Contains Element  ${Marketplace_Header}
     Wait Until Page Contains Element  ${Service_selector}
     Wait Until Page Contains Element  ${Properties_select}
     Wait Until Page Contains Element  ${Search_MarketPlace}
