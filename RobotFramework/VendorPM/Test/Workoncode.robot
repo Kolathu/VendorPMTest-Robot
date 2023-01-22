@@ -1,7 +1,8 @@
 *** Settings ***
 
 Documentation   To validate the login page
-Library     SeleniumLibrary
+Library  Collections
+Library  SeleniumLibrary
 Test Setup      open the browser with the Stage url
 #Test Teardown   Close Browser session
 Resource        ../PO/Generic.robot
