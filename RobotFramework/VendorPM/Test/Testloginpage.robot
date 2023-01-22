@@ -11,8 +11,15 @@ Validate login page
 
 *** Keywords ***
 open the browser with stage url
-    Create Webdriver    Chrome  executable_path=C:/Users/kolat/Documents/chromedriver_win32/chromedriver.exe
-    Go to   https://stage.vendorpm.com/login
+     ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}   add_argument    headless
+    Call Method    ${chrome_options}   add_argument    no-sandbox
+    Call Method    ${chrome_options}   add_argument    disable-dev-shm-usage
+    ${options}=     Call Method     ${chrome_options}    to_capabilities
+
+    Open Browser  https://stage.vendorpm.com/login   browser=chrome  desired_capabilities=${options}
+   // Create Webdriver    Chrome  executable_path=C:/Users/kolat/Documents/chromedriver_win32/chromedriver.exe
+    //Go to   https://stage.vendorpm.com/login
 
 validate page contents
      Page Should contain button     xpath=//button[@type='submit']
