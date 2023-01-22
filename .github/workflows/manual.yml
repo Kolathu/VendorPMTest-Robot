@@ -1,0 +1,72 @@
+# This is a basic workflow that is manually triggered
+
+#name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+#on:
+ # workflow_dispatch:
+    # Inputs the workflow accepts.
+  #  inputs:
+   #   name:
+        # Friendly description to be shown in the UI instead of 'name'
+    #    description: 'Person to greet'
+        # Default value if no value is explicitly provided
+     #   default: 'World'
+        # Input has to be provided for the workflow to run
+      #  required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+
+name: tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+     run-tests-chrome:
+     runs-on: ubuntu-latest
+     strategy:
+      matrix:
+        python-version: [ 3.7, 3.8, 3.9, '3.10', '3.11' ]
+        include:
+          - os: ubuntu-latest
+            set_display: export DISPLAY=:99; Xvfb :99 -screen 0 1024x768x24 -ac -noreset & sleep 3
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4.5.0
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+          pip install mock
+          sudo apt-get update
+          sudo apt-get -y -q install xvfb scrot zip curl libxml2-dev libxslt1-dev
+      - name: Run Chrome Robot Tests
+        uses: nick-fields/retry@v2.8.3
+        with:
+          timeout_minutes: 45
+          max_attempts: 10
+          command: |
+            ${{ matrix.set_display }}
+            robot --randomize suites -e BrokenORWindowsOREdge --output reports/outputChrome.xml test
+          new_command_on_retry: |
+            ${{ matrix.set_display }}
+            robot --rerunfailed "reports/outputChrome.xml" -e BrokenORWindowsOREdge --output reports/outputChrome.xml test
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: reportsChrome
+          path: reports
